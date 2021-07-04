@@ -1,9 +1,9 @@
 var a = ['car','car1','car2','car3',2,3,4,5];
 
-a.forEach((a)=> console.log(a));//for each
+a.forEach((b)=> console.log(b));//for each
 
 for (const item of a) {     //for off
-    console.log(item + ' 1');
+   console.log(item + ' 1');
     
 }
 
@@ -13,7 +13,7 @@ const symbol = {
     ig: "instagram"
 }
 
-for (const key in symbol) {
-    console.log(symbol[key]);
+//for (const key in symbol) {
+//    console.log(symbol[key]);
     
-}
+//}

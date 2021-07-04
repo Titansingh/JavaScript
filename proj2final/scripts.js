@@ -1,31 +1,16 @@
-const red = document.querySelector(".red");
-const cyan = document.querySelector(".cyan");
-const violet = document.querySelector(".violet");
-const orange = document.querySelector(".orange");
-const pink = document.querySelector(".pink");
 
-const center = document.querySelector(".center");
+const colorName = [".red",".cyan",".violet",".orange",".pink"]
 
-// console.log(window.getComputedStyle(red).backgroundColor);
+colorName.forEach((item) => {
+  document.querySelector(item).addEventListener("mouseenter",() =>{
+    document.querySelector(".center").style.backgroundColor = window.getComputedStyle(document.querySelector(item)).backgroundColor;})
+});
 
-const getBGColor = (selectedElement) => {
-  return window.getComputedStyle(selectedElement).backgroundColor;
-};
 
-// var color = getBGColor(pink);
 
-// pink.addEventListener("mouseenter", () => {
-//   center.style.background = color;
-// });
 
-const magicColorChanger = (element, color) => {
-  return element.addEventListener("mouseenter", () => {
-    center.style.background = color;
-  });
-};
 
-magicColorChanger(red, getBGColor(red));
-magicColorChanger(cyan, getBGColor(cyan));
-magicColorChanger(violet, getBGColor(violet));
-magicColorChanger(orange, getBGColor(orange));
-magicColorChanger(pink, getBGColor(pink));
+
+
+
+
